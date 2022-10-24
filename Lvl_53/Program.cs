@@ -34,15 +34,16 @@ void PrintMatrix(int[,] matrix)
 void ArraySwitch(int[,] matrix)
 {
     int[,] result = new int[matrix.GetLength(0), matrix.GetLength(1)];
-    int temp = default;
     for (int j = 0; j < matrix.GetLength(1); j++)
     {
-        temp = matrix[0, j];
+        int temp = matrix[0, j];
         matrix[0, j] = matrix[matrix.GetLength(0) - 1, j];
         matrix[matrix.GetLength(0) - 1, j] = temp;
     }
 
 }
+
+
 int[,] array2D = CreateMatrixRndInt(3, 4, -100, 100);
 PrintMatrix(array2D);
 ArraySwitch(array2D);
