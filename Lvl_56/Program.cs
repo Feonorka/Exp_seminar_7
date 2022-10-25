@@ -32,16 +32,6 @@ void PrintMatrix(int[,] matrix)
         Console.WriteLine("|");
     }
 }
-void PrintArray(int[] arr)
-{
-    Console.Write("[");
-    for (int i = 0; i < arr.Length; i++)
-    {
-        if (i < arr.Length - 1) Console.Write($"{arr[i]}, ");
-        else Console.Write($"{arr[i]}");
-    }
-    Console.WriteLine("]");
-}
 int[] MatrixRowLowSumm(int[,] arr)
 {
 int[] arrLow = new int[arr.GetLength(0)];
@@ -56,7 +46,6 @@ for (int i = 0; i < arr.GetLength(0); i++)
         }
         arrLow[i] = summ;
     }
-PrintArray(arrLow);
 return arrLow;
 }
 void MinRowIndex(int[] arrLow)
